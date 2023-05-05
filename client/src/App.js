@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -7,11 +6,12 @@ import Navbar from "./components/Navbar/Navbar";
 import AllRoutes from "./AllRoutes";
 
 function App() {
+
   return (
     <div className="App">
       <Router>
-        <Navbar handleSlideIn={handleSlideIn} />
-        <AllRoutes slideIn={slideIn} handleSlideIn={handleSlideIn} />
+        <Navbar/>
+        <AllRoutes/>
       </Router>
     </div>
   );
