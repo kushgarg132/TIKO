@@ -1,6 +1,6 @@
 ## Project Milestones
 
-- [x] Users Can Create Habits
+- [x] Landing Page : (Navbar)
 - [x] Users can choose consistency for respective habits
 - [x] Users can access calendar
 - [ ] Calendar , Habit APIs
