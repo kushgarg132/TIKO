@@ -59,7 +59,7 @@ export default function SignInSide() {
               mx: 5,
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
+              
             }}
           >
             
@@ -131,16 +131,7 @@ export default function SignInSide() {
                 id="password"
                 autoComplete="current-password"
               />
-                  <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="cpassword"
-                label="Confirm Password"
-                type="cpassword"
-                id="cpassword"
-                autoComplete="cpassword"
-              />
+                 
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Senior Citizen"
