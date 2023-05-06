@@ -1,128 +1,131 @@
-.main-nav {
-  min-height: 50px;
-  width: 100%;
-  margin: 0% auto;
-  border-top: solid 3px #ef8236;
-  box-shadow: 0px 1px 5px #00000033;
-  position: fixed;
-  z-index: 15;
-  top: 0%;
-  left: 0%;
-  background-color: #f8f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Navigation bar */
 .navbar {
-  height: 100%;
-  min-width: 85%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 80px;
+  padding: 20px 20px 20px 0;
+  padding-right: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
 }
 
-.slide-in-icon {
+/* Navigation bar logo */
+.navbar__logo {
+  margin: 10px;
+}
+
+.navbar__logo img {
+  height: 100%;
+  width: 100px;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  /* Optional transition effect */
+  /* transition: height 0.5s ease; */
+}
+
+/* Navigation bar toggle */
+.navbar__toggle {
   display: none;
-  transition: 0.2s;
-  padding: 5px 6px 3px 6px;
-  border-radius: 50%;
-  background-color: inherit;
-  border: none;
+  font-size: 24px;
   cursor: pointer;
 }
 
-.navbar .navbar-1 {
-  display: flex;
-  align-items: center;
-  /* flex-grow: 1; */
-}
-
-.navbar .navbar-2 {
-  display: flex;
-  align-items: center;
-}
-
-.navbar .search-box {
-  display: flex;
-}
-
-
-#search-bar{
-  width: 500px;
-}
-
-.nav-logo {
-  padding: 5px 25px;
-}
-
-.nav-item {
-  margin: 0px 3px;
-  font-size: small;
-  font-weight: 500;
-  text-decoration: none;
-  color: rgb(69, 69, 69);
-  transition: 0.2s;
-}
-
-.nav-btn {
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 10px 20px;
-}
-
-.nav-item:hover,
-.slide-in-icon:hover {
-  background-color: rgb(226, 226, 226);
-}
-
-.navbar .navbar-1 form {
-  flex-grow: 1;
-  padding: 0px 12px;
-  position: relative;
-}
-
-.navbar .navbar-1 form input {
-  min-width: 90%;
-  margin: 0;
-  padding: 8px 10px 8px 32px;
-  font-size: 13px;
-  border: solid 1px #0000003e;
-  border-radius: 3px;
-}
-
-.navbar .navbar-1 form .search-icon {
-  position: absolute;
-  left: 25px;
-  top: 8px;
-}
-
-.nav-links {
-  padding: 7px 13px;
-  border: solid 1px blue;
-  border-radius: 3px;
-  background-color: #e7f8fe;
-  cursor: pointer;
-}
-
-.nav-links:hover {
-  background-color: #d3e4eb;
-}
-
-@media screen and (max-width: 1120px) {
-  .navbar .navbar-1 form {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .slide-in-icon {
+/* Responsive navigation bar toggle */
+@media screen and (max-width: 768px) {
+  .navbar__toggle {
     display: block;
   }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .navbar__menu-item {
+    margin: 10px 0;
+  }
+
+  .navbar__menu-item a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+  }
 }
 
-@media screen and (max-width: 620px) {
-  .navbar .navbar-1 .res-nav {
-    display: none;
-  }
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar__menu-item {
+  margin-left: 20px;
+}
+
+.navbar__menu-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Navigation bar actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation bar user link */
+.navbar__user-link {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar__user-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.navbar__user-name {
+  font-size: 16px;
+}
+
+/* Styling for the navigation bar when scrolled */
+.navbar.scrolled {
+  background-color: #424443;
+  height: 40px;
+  /* padding: 10px 20px; */
+}
+
+.navbar.scrolled a {
+  color: white;
+}
+
+.navbar.scrolled .navbar__logo img {
+  height: 55px;
 }
