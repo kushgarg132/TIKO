@@ -51,4 +51,4 @@ app.use('/booking', bookingRoute);
 app.use('/register', registerRouter);  // To register page 
 app.use('/user', passport.authenticate('jwt', { session: false }), loggedInPage); //To Secure Route
 
-module.exports = app;
+module.exports = app;confi
