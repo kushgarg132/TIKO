@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
+        {/* <Navbar/> */}
         <AllRoutes/>
       </Router>
     </div>

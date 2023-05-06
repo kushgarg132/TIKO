@@ -1,5 +1,5 @@
 .search-box {
-    margin: 120px auto;
+    margin: 180px auto;
     padding: 150x;
     display: flex;
     flex-direction: column;
@@ -72,8 +72,8 @@
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     /* margin: 20px auto; */
-    margin-top: 20px; 
     /* margin-right: 0px */
+    margin-bottom: -40px;
     width: 150px;
   }
   
