@@ -1,34 +1,76 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-const BusSchema = new Schema({
+const TrainSchema = new Schema(
+{
     trainName: {
-        type: String
-    },
-    trainType: {
-        type: String
+        type: String,
+        required: true
     },
     trainNumber: {
-        type: String
+        type: Number,
+        required: true
     },
-    startCity: {
-        type: String
+    journeyDay: {
+        type: [String],
+        enum: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        required: true
     },
-    destination: {
-        type: String
-    },
-    totalSeats: {
-        type: String
-    },
-    availableSeats: {
-        type: String
-    },
-    pricePerSeat: {
-        type: String
-    }
-}, {collection: "buses"})
+    acCoaches: [
+        {
+            coachNumber: {
+                type: Number,
+                required: true
+            },
+            capacity: {
+                type: Number,
+                required: true
+            }
+        }
+    ],
+    sleeperCoaches: [
+        {
+            coachNumber: {
+                type: Number,
+                required: true
+            },
+            capacity: {
+                type: Number,
+                required: true
+            }
+        }
+    ],
+    route: [
+        {
+            stationName: {
+                type: String,
+                required: true
+            },
+            stationCode: {
+                type: String,
+                required: true
+            },
+            arrivalTime: {
+                type: String,
+                required: true
+            },
+            departureTime: {
+                type: String,
+                required: true
+            },
+            haltDuration: {
+                type: Number,
+                required: true
+            },
+            distanceFromStart: {
+                type: Number,
+                required: true
+            }
+        }
+    ]
 
-const train = mongoose.model('train', BusSchema)
+}, { collection: "trains" })
+
+const train = mongoose.model('train', TrainSchema)
 
 module.exports = train;
