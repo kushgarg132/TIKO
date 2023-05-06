@@ -10,13 +10,17 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { format, addMonths } from 'date-fns';
 import {
     
-    
+    Input,
     FormControl,
     InputLabel,
     Select,
     MenuItem,
+    Radio,
+    RadioGroup,
+    FormLabel,
     
     Stack,
     DatePicker,
@@ -25,7 +29,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function SignUp() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -55,7 +59,7 @@ export default function SignInSide() {
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} >
           <Box
             sx={{
-              my: 1,
+              my: 3,
               mx: 5,
               display: 'flex',
               flexDirection: 'column',
@@ -89,7 +93,20 @@ export default function SignInSide() {
                 autoFocus
                 sx={{m:1}}
               />
+
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="phone"
+                label="Phone Number"
+                name="phone"
+                autoComplete="phone"
+                autoFocus
+              />
+
               
+
             
               <TextField
                 margin="normal"
@@ -105,41 +122,43 @@ export default function SignInSide() {
                 margin="normal"
                 required
                 fullWidth
-                id="phone"
-                label="Phone Number"
-                name="phone"
-                autoComplete="phone"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="dob"
-                label="Date of Birth"
-                name="dob"
-                autoComplete="dob"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
                 name="password"
                 label="Password"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
-                 
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Senior Citizen"
-              />
-               <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Disabled"
-              />
+
+              
+            
+<FormControl sx={{ m: 1 }}>
+  <FormLabel id="demo-controlled-radio-buttons-group">Gender:</FormLabel>
+  <RadioGroup
+    aria-labelledby="demo-controlled-radio-buttons-group"
+    name="controlled-radio-buttons-group"
+    row
+  >
+    <FormControlLabel value="female" control={<Radio />} label="Female" />
+    <FormControlLabel value="male" control={<Radio />} label="Male" />
+  </RadioGroup>
+</FormControl>
+
+<FormControl sx={{ m: 1 }}>
+  Date of birth:
+  <Input
+    type="date"
+    id="departureDate"
+    max={format(addMonths(new Date(), 4), 'yyyy-MM-dd')}
+    required
+  />
+</FormControl>
+
+
+
+           
+           
+                 <br />
+             
               <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                 Sign Up
               </Button>
