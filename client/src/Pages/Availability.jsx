@@ -1,5 +1,5 @@
 import SearchBox from "../components/SearchBar/SearchBar";
-import "../components/SearchBar/SearchB.css";
+// import "../components/SearchBar/SearchB.css";
 
 
 const Availability = () => {
