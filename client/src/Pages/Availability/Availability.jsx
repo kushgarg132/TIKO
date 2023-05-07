@@ -1,6 +1,6 @@
-import SearchBo from "../components/SearchBar/SearchB";
+import SearchBo from "../../components/SearchBar/SearchB";
 // import "../components/SearchBar/SearchB.css";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Availability = () => {
   

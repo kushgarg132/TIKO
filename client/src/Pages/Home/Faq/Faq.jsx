@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Faq/Faq.css";
+import "./Faq.css";
 
 const FAQSection = () => {
   const [activeTab, setActiveTab] = useState(null);

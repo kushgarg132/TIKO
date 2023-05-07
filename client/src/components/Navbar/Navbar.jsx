@@ -55,12 +55,12 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar__actions">
-        <a href="#" className="navbar__user-link">
+        <a href="/login" className="navbar__user-link">
           <FontAwesomeIcon
             icon={faUser}
             className="navbar__user-icon"
           />
-          <span className="navbar__user-name">My Account</span>
+          <span className="navbar__user-name">Login/Signup</span>
         </a>
       </div>
     </nav>
