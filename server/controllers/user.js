@@ -22,8 +22,9 @@ export const signup = async (req, res) => {
 
 };
 
-export const login = async (req, res, next) => {
+export const login = async (req, res) => {
     const { email, password } = req.body;
+
     try {
         User.findOne({ email: email }, (err, doc) => {
             console.log(doc);
@@ -38,7 +39,7 @@ export const login = async (req, res, next) => {
             }
         });
     } catch (error) { 
-        
+        res.status(500).json("Something went worng...");
     }
 
 };
