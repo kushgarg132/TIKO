@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import "./SearchBar.css";
+import "./SearchB.css";
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 import { format, addMonths } from 'date-fns';
 
-const SearchBox = () => {
+const SearchBo = () => {
   const [fromCity, setFromCity] = useState('');
   const [toCity, setToCity] = useState('');
   const [departureDate, setDepartureDate] = useState('');
@@ -44,9 +44,9 @@ const handleDepartureDateChange = (event) => {
 
   return (
     <>
-      <form className="search-box" onSubmit={handleSubmit}>
-        <div className="search-box-inputs">
-          <div className="input-group">
+      <form className="search-b" onSubmit={handleSubmit}>
+        <div className="search-b-inputs">
+          <div className="input-grp">
             <label htmlFor="fromCity">From</label>
             <input
               type="text"
@@ -57,11 +57,11 @@ const handleDepartureDateChange = (event) => {
               required
             />
           </div>
-          <button className="swap-button" onClick={handleSwap}>
+          <button className="swap-but" onClick={handleSwap}>
             <i className="fas fa-exchange-alt"><MdOutlineSwapHorizontalCircle/></i>
           </button>
 
-          <div className="input-group">
+          <div className="input-grp">
             <label htmlFor="toCity">To</label>
             <input
               type="text"
@@ -73,7 +73,7 @@ const handleDepartureDateChange = (event) => {
             />
           </div>
 
-          <div className="input-group">
+          <div className="input-grp">
             <label htmlFor="departureDate">Departure Date</label>
             <input
               type="date"
@@ -85,11 +85,11 @@ const handleDepartureDateChange = (event) => {
               required
             />
           </div>
-        </div>
-        <button className='butt' type="submit">SEARCH</button>
+          <button className = "but" type="submit">SEARCH</button>
+        </div> 
       </form>
       </>
   );
 };
 
-export default SearchBox;
+export default SearchBo;

@@ -1,4 +1,4 @@
-.search-box {
+.search-b {
     margin: 180px auto;
     padding: 150x;
     display: flex;
@@ -6,15 +6,15 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: #666666;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    width: 800px;
+    width: 1000px;
     margin-bottom: -35px;
   }
   
-  .search-box-inputs {
+  .search-b-inputs {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,20 +22,20 @@
     gap: 20px;
   }
   
-  .input-group {
+  .input-grp {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
   
-  .input-group label {
+  .input-grp label {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  .input-group input,
-  .input-group select {
+  .input-grp input,
+  .input-grp select {
     font-size: 16px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -43,14 +43,14 @@
     width: 200px;
   }
   
-  .input-group input:focus,
-  .input-group select:focus {
+  .input-grp input:focus,
+  .input-grp select:focus {
     outline: none;
     border-color: #0073b1;
     box-shadow: 0 0 5px rgba(0, 115, 177, 0.5);
   }
   
-  .input-group select {
+  .input-grp select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -60,9 +60,9 @@
     padding-right: 30px;
   }
   
-  .butt {
+  .but {
     background-color: #0073b1;
-    background-image: linear-gradient(to right, #279acf, #0073b1);
+    background-image: linear-gradient(to right, #ac6c19, #723e15);
     color: #fff;
     border: none;
     border-radius: 20px;
@@ -73,11 +73,11 @@
     transition: background-color 0.2s ease-in-out;
     /* margin: 20px auto; */
     /* margin-right: 0px */
-    margin-bottom: -40px;
+    margin-bottom: -30px;
     width: 150px;
   }
   
-  .butt:hover {
+  .but:hover {
     background-color: #005983;
   }
 /*   
@@ -99,7 +99,7 @@
     line-height: 1;
   } */
 
-  .swap-button {
+  .swap-but {
     border-radius: 50%;
     background-color: #626465;
     color: white;
@@ -114,7 +114,7 @@
     margin-top: 30px;
   }
   
-  .swap-button:hover {
+  .swap-but:hover {
     background-color: #005983;
   }
   
