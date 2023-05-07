@@ -1,8 +1,9 @@
 import express from 'express';
-import { getTicketByPnr } from '../controllers/tickets.js';
+import { getTicketByPnr,saveTicket } from '../controllers/tickets.js';
 
 const router = express.Router();
 
-router.get('/tickets/:pnr', getTicketByPnr);
+router.post("/save",saveTicket);
+router.get('/:pnr', getTicketByPnr);
 
 export default router;

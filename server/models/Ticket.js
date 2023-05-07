@@ -52,6 +52,6 @@ const TicketSchema = new Schema({
         type: Number,
         required: true,
     },
-});
+}, { collection: "ticket" });
 
-export default mongoose.model("Ticket", TicketSchema);
+export default mongoose.model("ticket", TicketSchema);

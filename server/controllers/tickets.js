@@ -15,3 +15,6 @@ export const getTicketByPnr = async (req, res) => {
     return res.status(500).json({ message: 'Server error' });
   }
 };
+export const saveTicket = async (req, res) => {
+  
+};
