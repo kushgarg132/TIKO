@@ -18,7 +18,7 @@ const theme = createTheme({
 });
 
 export default function PnrStatusCard() {
-    const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
 
   const handlePnrSubmit = (event) => {
@@ -43,7 +43,7 @@ export default function PnrStatusCard() {
                 fullWidth
                 margin="normal"
               />
-              <Button type="submit" variant="contained" color="primary" fullWidth style={{ padding:4 }}>
+              <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '20px' }}>
                 Check Status
               </Button>
             </form>
@@ -51,12 +51,12 @@ export default function PnrStatusCard() {
         </Card>
       </div>
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
- 
-  <Card sx={{width:500}}>
+
+        <Card sx={{ width: 500 }}>
           <CardHeader title="PNR Status" />
           <CardContent>
             <form onSubmit={handlePnrSubmit}>
-             
+
               <div style={{ borderBottom: '1px solid #ccc', marginBottom: '1rem' }}></div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <div>Train Name</div>
@@ -82,27 +82,17 @@ export default function PnrStatusCard() {
                 <div>Destination</div>
                 <div>Mumbai</div>
               </div>
-             
-              
               <div style={{ borderBottom: '1px solid #ccc', marginBottom: '1rem' }}></div>
-              <div>List of Passengers:</div>
-              <br />
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <div>Passenger 1</div> <div>Confirmed</div>
+                <div>Status</div>
+                <div>Confirmed</div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <div>Passenger 2</div> <div>Confirmed</div>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <div>Passenger 3</div> <div>Confirmed</div>
-              </div>
-              
-              
+
             </form>
           </CardContent>
-          </Card>
-  {/* Add content for the dialog box here */}
-</Dialog>
+        </Card>
+        {/* Add content for the dialog box here */}
+      </Dialog>
 
     </ThemeProvider>
   );

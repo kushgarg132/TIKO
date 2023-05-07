@@ -47,7 +47,7 @@ const Navbar = () => {
           <a href="#">Cancel Train Tickets</a>
         </li>
         <li className="navbar__menu-item">
-          <a href="#">PNR Status</a>
+          <a href="/checkPNR">PNR Status</a>
         </li>
         <li className="navbar__menu-item">
           <a href="#">Train Timetable</a>
@@ -55,12 +55,12 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar__actions">
-        <a href="#" className="navbar__user-link">
+        <a href="/login" className="navbar__user-link">
           <FontAwesomeIcon
             icon={faUser}
             className="navbar__user-icon"
           />
-          <span className="navbar__user-name">My Account</span>
+          <span className="navbar__user-name">Login/Signup</span>
         </a>
       </div>
     </nav>
