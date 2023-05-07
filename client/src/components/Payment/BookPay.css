@@ -1,0 +1,56 @@
+.booking-container {
+    margin-right: 8rem;
+    margin-top: 8rem;
+    border: 1px solid;
+    padding-bottom: 1rem;
+    max-width: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+ 
+}
+
+.booking-button {
+  width: 17rem;
+  margin: 1.4rem;
+  padding: .445rem;
+  background-color: #008080;
+color: white;
+border: 1px solid;
+border-radius: 5px;
+font-size: 16px;
+padding: 10px 20px;
+cursor: pointer;
+
+}
+
+.booking-button:hover {
+  background-color: #006666;
+}
+
+
+.booking-details {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.booking-detail-left {
+  text-align: left;
+  flex: 1;
+}
+
+
+
+.booking-detail-right {
+ 
+  flex: 1;
+text-align: right;
+}
