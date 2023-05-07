@@ -47,7 +47,7 @@ const Navbar = () => {
           <a href="#">Cancel Train Tickets</a>
         </li>
         <li className="navbar__menu-item">
-          <a href="#">PNR Status</a>
+          <a href="/checkPNR">PNR Status</a>
         </li>
         <li className="navbar__menu-item">
           <a href="#">Train Timetable</a>
