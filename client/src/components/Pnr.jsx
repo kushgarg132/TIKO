@@ -43,7 +43,7 @@ export default function PnrStatusCard() {
                 fullWidth
                 margin="normal"
               />
-              <Button type="submit" variant="contained" color="primary" fullWidth style={{ marginTop: '20px' }}>
+              <Button type="submit" variant="contained" color="primary" fullWidth style={{ padding:4 }}>
                 Check Status
               </Button>
             </form>
@@ -82,11 +82,21 @@ export default function PnrStatusCard() {
                 <div>Destination</div>
                 <div>Mumbai</div>
               </div>
+             
+              
               <div style={{ borderBottom: '1px solid #ccc', marginBottom: '1rem' }}></div>
+              <div>List of Passengers:</div>
+              <br />
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                <div>Status</div>
-                <div>Confirmed</div>  
+                <div>Passenger 1</div> <div>Confirmed</div>
               </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <div>Passenger 2</div> <div>Confirmed</div>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                <div>Passenger 3</div> <div>Confirmed</div>
+              </div>
+              
               
             </form>
           </CardContent>
