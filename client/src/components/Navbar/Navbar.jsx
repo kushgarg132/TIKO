@@ -32,8 +32,10 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar__logo">
-        <img src="logo.webp" alt="Train Ticket Reservation" />
-      </div>
+        <a href="/">
+          <img src="logo.webp" alt="Train Ticket Reservation" />
+        </a>
+     </div>
 
       <div className={`navbar__toggle ${showMenu ? "active" : ""}`} onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />
@@ -41,17 +43,17 @@ const Navbar = () => {
 
       <ul className={`navbar__menu ${showMenu ? "active" : ""}`}>
         <li className="navbar__menu-item">
-          <a href="#">Book Train Tickets</a>
+          <a href="/">Book Train Tickets</a>
         </li>
-        <li className="navbar__menu-item">
+        {/* <li className="navbar__menu-item">
           <a href="#">Cancel Train Tickets</a>
-        </li>
+        </li> */}
         <li className="navbar__menu-item">
           <a href="/checkPNR">PNR Status</a>
         </li>
-        <li className="navbar__menu-item">
+        {/* <li className="navbar__menu-item">
           <a href="#">Train Timetable</a>
-        </li>
+        </li> */}
       </ul>
 
       <div className="navbar__actions">

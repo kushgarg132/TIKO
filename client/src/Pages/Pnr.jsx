@@ -9,7 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { green } from '@mui/material/colors';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
-
+import Navbar from '../components/Navbar/Navbar';
 
 const theme = createTheme({
   palette: {
@@ -30,6 +30,7 @@ export default function PnrStatusCard() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Navbar/>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
         <Card sx={{ minWidth: 275, maxWidth: 400, boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .3)', borderRadius: '10px', padding: '20px' }}>
           <CardHeader title="PNR Status" style={{ textAlign: 'center' }} />

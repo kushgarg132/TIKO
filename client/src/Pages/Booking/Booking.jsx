@@ -1,7 +1,7 @@
 import React from 'react';
 import './Booking.css'
 import { FaPlus } from 'react-icons/fa';
-import TrainCard from '../components/Navbar/TrainCard/TrainCard';
+import TrainCard from '../../components/TrainCard/TrainCard';
 
 const PaymentBox = ({ price }) => {
   const handlePayClick = () => {

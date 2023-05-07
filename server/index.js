@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.js";
 import trainRoutes from "./routes/train.js";
+import ticketRoutes from "./routes/ticket.js";
 import db from "./connectMongoDB.js";
 
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(cors());
 
 app.use("/user", userRoutes);
 app.use("/train", trainRoutes);
+app.use("/ticket", ticketRoutes )
 
 const PORT = process.env.PORT || 80;
 
