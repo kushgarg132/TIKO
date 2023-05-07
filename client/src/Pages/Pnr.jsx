@@ -18,7 +18,7 @@ const theme = createTheme({
 });
 
 export default function PnrStatusCard() {
-    const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
 
   const handlePnrSubmit = (event) => {
@@ -51,12 +51,12 @@ export default function PnrStatusCard() {
         </Card>
       </div>
       <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)}>
- 
-  <Card sx={{width:500}}>
+
+        <Card sx={{ width: 500 }}>
           <CardHeader title="PNR Status" />
           <CardContent>
             <form onSubmit={handlePnrSubmit}>
-             
+
               <div style={{ borderBottom: '1px solid #ccc', marginBottom: '1rem' }}></div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <div>Train Name</div>
@@ -85,14 +85,14 @@ export default function PnrStatusCard() {
               <div style={{ borderBottom: '1px solid #ccc', marginBottom: '1rem' }}></div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <div>Status</div>
-                <div>Confirmed</div>  
+                <div>Confirmed</div>
               </div>
-              
+
             </form>
           </CardContent>
-          </Card>
-  {/* Add content for the dialog box here */}
-</Dialog>
+        </Card>
+        {/* Add content for the dialog box here */}
+      </Dialog>
 
     </ThemeProvider>
   );
