@@ -1,0 +1,81 @@
+.filters {
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.filters h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filters input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filters input[type="checkbox"]:checked + span {
+  color: #0071c2;
+  font-weight: bold;
+}
+
+.filters input[type="checkbox"]:checked + span::before {
+  content: "";
+  display: inline-block;
+  margin-right: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #0071c2;
+}
+
+.filters input[type="checkbox"]:hover + span::before {
+  background-color: #0071c2;
+  opacity: 0.3;
+}
+
+.filters input[type="checkbox"]:checked:hover + span::before {
+  opacity: 0.8;
+}
+
+.filters input[type="checkbox"]:focus {
+  outline: none;
+}
+
+.filters input[type="checkbox"]:focus + span::before {
+  box-shadow: 0 0 0 2px #0071c2;
+}
+
+.filters .quick-filters {
+  margin-bottom: 20px;
+}
+
+.filters .quick-filters label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.filters .timing-filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filters .timing-filters label {
+  width: calc(25% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .filters .timing-filters label {
+    width: calc(33.33% - 10px);
+  }
+}
