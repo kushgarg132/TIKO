@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const TrainSchema = new Schema(
@@ -73,8 +73,6 @@ const TrainSchema = new Schema(
         }
     ]
 
-}, { collection: "trains" })
+}, { collection: "train_info" })
 
-const train = mongoose.model('train', TrainSchema)
-
-module.exports = train;
+export default mongoose.model("train_info", TrainSchema);

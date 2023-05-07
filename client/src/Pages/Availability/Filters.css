@@ -3,6 +3,9 @@
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 20px;
+  position: absolute;
+  top: 180px;
+  right: 90px;
 }
 
 .filters h2 {
