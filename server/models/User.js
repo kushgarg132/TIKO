@@ -26,6 +26,6 @@ const UserSchema = new Schema({
         type: Date,
         required: false,
     },
-});
+}, { collection: "UserData" });
 
-export default mongoose.model("Users", UserSchema);
+export default mongoose.model("UserData", UserSchema);
