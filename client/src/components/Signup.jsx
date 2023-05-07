@@ -36,6 +36,11 @@ export default function SignUp() {
     console.log({
       email: data.get('email'),
       password: data.get('password'),
+      fname: data.get('fname'),
+      lname: data.get('lname'),
+      phone: data.get('phone'),
+      dob: data.get('dob'),
+
     });
   };
 
@@ -105,9 +110,7 @@ export default function SignUp() {
                 autoFocus
               />
 
-              
 
-            
               <TextField
                 margin="normal"
                 required
@@ -147,16 +150,15 @@ export default function SignUp() {
   Date of birth:
   <Input
     type="date"
-    id="departureDate"
+    id="dob"
     max={format(addMonths(new Date(), 4), 'yyyy-MM-dd')}
+    name="dob"
+
     required
   />
 </FormControl>
 
 
-
-           
-           
                  <br />
              
               <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
