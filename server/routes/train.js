@@ -4,7 +4,7 @@ import {getAllTrains,getTrain,addTrains} from "../controllers/trains.js";
 const router = express.Router();
 
 router.get("/getAllTrains",getAllTrains);
-router.post("/getTrain/:id", getTrain);
+router.post("/getTrain", getTrain);
 router.post("/admin/addTrains",addTrains);
 
 

@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import "./SearchBar.css";
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
-import { format, addMonths } from 'date-fns';
 
+import { useDispatch } from "react-redux";
+import { format, addMonths } from 'date-fns';
+import { getTrain } from '../../actions/trains';
 const SearchBox = () => {
   const [fromCity, setFromCity] = useState('');
   const [toCity, setToCity] = useState('');
   const [departureDate, setDepartureDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
   const [passengerCount, setPassengerCount] = useState(1);
-
+  
+  const dispatch = useDispatch();
   const handleFromCityChange = (event) => {
     setFromCity(event.target.value);
   };
@@ -22,16 +25,14 @@ const handleDepartureDateChange = (event) => {
     setDepartureDate(event.target.value);
   };
 
-//   const handleReturnDateChange = (event) => {
-//     setReturnDate(event.target.value);
-//   };
-
-//   const handlePassengerCountChange = (event) => {
-//     setPassengerCount(event.target.value);
-//   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const source=data.get('fromCity');
+    const destination=data.get('toCity');
+    const date=data.get('departureDate');
+    const day=new Date(date).getDay();
+    dispatch(getTrain({source,destination,day}));
   };
 
   const handleSwap = () => {

@@ -16,8 +16,6 @@ const AllRoutes = () => {
       <Route path="/register" element={<Signup />} />
       <Route path="/checkPNR" element={<Pnr />} />
       <Route path="/book" element={<PaymentBoxContainer />} />
-
-
     </Routes>
   );
 };
