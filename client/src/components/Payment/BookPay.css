@@ -1,9 +1,9 @@
 .booking-container {
-    margin-right: 8rem;
-    margin-top: 8rem;
-    border: 1px solid;
-    padding-bottom: 1rem;
-    max-width: 400px;
+  margin-right: 8rem;
+  margin-top: 8rem;
+  border: 1px solid;
+  padding-bottom: 1rem;
+  max-width: 300px; /* Set max-width to 300px */
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   padding: 30px;
@@ -11,7 +11,6 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #ccc;
- 
 }
 
 .booking-button {
@@ -29,7 +28,7 @@ cursor: pointer;
 }
 
 .booking-button:hover {
-  background-color: #006666;
+  background-color: #006060;
 }
 
 
@@ -44,7 +43,7 @@ align-items: center;
 
 .booking-detail-left {
   text-align: left;
-  flex: 1;
+  
 }
 
 

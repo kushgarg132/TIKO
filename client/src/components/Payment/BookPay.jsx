@@ -26,7 +26,7 @@ const PaymentBox = ({ price }) => {
         </div>
         <div className='booking-detail-right'>
           <p>${price}</p>
-          <p>$0</p>
+          <p>${price}</p>
           <p>${price}</p>
           <hr />
           <p><strong>${price}</strong></p>
