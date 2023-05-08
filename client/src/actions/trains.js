@@ -12,12 +12,36 @@ export const getAllTrains = () => async (dispatch) => {
 };
 
 export const getTrain = (trainData) => async (dispatch) => {
+  // console.log("HII");
+  // console.log(trainData);
+  const {fromCity,toCity,day,today} = trainData;
+  const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   try {
-    // console.log("HII");
-    const { data } = await api.getTrain(trainData);
-    // console.log("Bye");
-    dispatch({ type: "FETCH_TRAINS", payload:data });
+    // console.log(fromCity);
+    // console.log(toCity);
+    const { data } = await api.getAllTrains();
+    const filteredTrains = data.filter(train => {
+      var check_source=false;
+      var check_destination=false;
+      return train.route.some(routeObj => {
+        console.log(train.journeyDay);
+        console.log(routeObj.arrivalDay);
+        console.log(day);
+        
+        if(routeObj.stationName === fromCity && train.journeyDay.includes(DAYS[day-1]))
+          check_source=true;
+        if(routeObj.stationName === toCity)
+          check_destination=true;
+        return (check_source && check_destination);
+      });
+    });
+
+    dispatch({ type: "FETCH_TRAINS", payload: filteredTrains });
+    
+    // Rest of the code...
   } catch (error) {
+    // Handle error...
     console.log(error);
   }
 };
+

@@ -3,13 +3,17 @@ import "./SearchB.css";
 import { MdOutlineSwapHorizontalCircle } from "react-icons/md";
 import { format, addMonths } from 'date-fns';
 
+import { useDispatch } from "react-redux";
+import { getTrain } from '../../actions/trains';
+import { Navigate, useNavigate } from 'react-router-dom';
+
 const SearchBo = () => {
   const [fromCity, setFromCity] = useState('');
   const [toCity, setToCity] = useState('');
   const [departureDate, setDepartureDate] = useState('');
-  const [returnDate, setReturnDate] = useState('');
-  const [passengerCount, setPassengerCount] = useState(1);
+  const navigate= useNavigate();
 
+  const dispatch = useDispatch();
   const handleFromCityChange = (event) => {
     setFromCity(event.target.value);
   };
@@ -22,17 +26,15 @@ const handleDepartureDateChange = (event) => {
     setDepartureDate(event.target.value);
   };
 
-//   const handleReturnDateChange = (event) => {
-//     setReturnDate(event.target.value);
-//   };
-
-//   const handlePassengerCountChange = (event) => {
-//     setPassengerCount(event.target.value);
-//   };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const day=new Date(departureDate).getDay();
+  var today = Date.now();
+  // console.log(source);
+  console.log(day)
+  dispatch(getTrain({fromCity,toCity,day,today}));
+  navigate("/avail");
+};
 
   const handleSwap = () => {
     const temp = fromCity;

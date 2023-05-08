@@ -1,5 +1,6 @@
 import React from "react";
 import "./TrainCards.css";
+import { getTrain } from '../../actions/trains';
 
 const TrainCard = (props) => {
   return (
@@ -38,7 +39,8 @@ const TrainCard = (props) => {
               {props.train.route[0].departureTime}
             </div>
             <div className="train-departure-station">
-              {props.train.route[0].stationName}
+              {/* {props.train.route[0].stationName} */}
+              {props.fromCity}
             </div>
           </div>
           <div className="train-info-left-left">➔</div>
@@ -52,7 +54,8 @@ const TrainCard = (props) => {
               {props.train.route[props.train.route.length - 1].arrivalTime}
             </div>
             <div className="train-arrival-station">
-              {props.train.route[props.train.route.length - 1].stationName}
+              {/* {props.train.route[props.train.route.length - 1].stationName} */}
+              {props.toCity}
             </div>
           </div>
         </div>
