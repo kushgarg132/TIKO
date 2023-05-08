@@ -1,8 +1,20 @@
 import React from "react";
 import "./TrainCards.css";
+import { Navigate, useNavigate } from "react-router-dom";
+
+
 
 const TrainCard = (props) => {
+  const history=useNavigate()
+  
+  const sendTrain = (train) =>{
+    const queryParams = new URLSearchParams({data:JSON.stringify(train)}).toString();
+    history(`/book?${queryParams}`);
+  }
+  
+
   return (
+    
     <div className="train-card">
       <div className="train-card-header">
         <div className="train-name">{props.train.trainName}</div>
@@ -52,10 +64,10 @@ const TrainCard = (props) => {
             </div>
           </div>
         </div>
-        <div className="train-subscriptions">
+        <div className="train-subscriptions" onClick={()=>sendTrain(props.train)}>
           <div className="train-subscription">
             <div className="subscription-left">
-              <div className="subscription-class">SL</div>
+              <div className="subscription-class" >SL</div>
               {/* <div className="subscription-price">&#x20B9;{props.train.slprice}</div> */}
             </div>
             <div className="subscription-right">

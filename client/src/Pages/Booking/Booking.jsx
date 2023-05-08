@@ -2,16 +2,22 @@ import React from 'react';
 import './Booking.css'
 import { FaPlus } from 'react-icons/fa';
 import TrainCard from '../../components/TrainCard/TrainCard';
+import  { useLocation, useParams } from 'react-router-dom';
 
 const PaymentBox = ({ price }) => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const data = queryParams.get('data');
+  const train=JSON.parse(data);
   const handlePayClick = () => {
     // Handle payment logic here
     console.log('Payment processed successfully!');
   };
 
+
   return (
     <div>
-      <TrainCard/>
+      <TrainCard train={train}/>
     <div className='booking-container'>
       <button onClick={handlePayClick} className='booking-button'>Pay</button>
       <hr />
