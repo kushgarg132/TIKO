@@ -26,6 +26,9 @@ const UserSchema = new Schema({
         type: Date,
         required: false,
     },
+    is_admin: {
+        type: Boolean,
+    },
 }, { collection: "UserData" });
 
 export default mongoose.model("UserData", UserSchema);

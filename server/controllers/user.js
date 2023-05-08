@@ -20,7 +20,8 @@ export const signup = async (req, res) => {
         password: hashedPassword,
         mobile,
         gender,
-        dob
+        dob,
+        is_admin:false
       });
       console.log("biiii");
       const token = jwt.sign(

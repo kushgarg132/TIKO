@@ -16,10 +16,15 @@ export const login = (authData, navigate) => async (dispatch) => {
   try {
     // console.log("HII");
     const { data } = await api.logIn(authData);
-    // console.log("Bye");
+    console.log(data);
     dispatch({ type: "AUTH", data });
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
-    navigate("/");
+    
+    if(data.result.is_admin)
+      navigate("/admin");
+    else
+      navigate("/");
+    
   } catch (error) {
     console.log(error);
   }
