@@ -14,7 +14,9 @@ export const getTrain = async (req, res) => {
   const { source, dest, day } = req.body;
 
   try {
-    const trainList = await Trains.find();
+    const trainList = await Trains.find(
+      {stationCode:source , }
+    );
     res.status(200).json(trainList);
   } catch (error) {
     res.status(404).json({ message: error.message });
