@@ -1,4 +1,4 @@
-.booking-container {
+.booking-container-1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -7,28 +7,28 @@
   padding: 10px;
 }
 
-.train-card-container {
+.train-card-container-1 {
   width: 60%;
   padding-right: 2rem;
   flex-basis: 60%;
   margin-bottom: 1rem;
 }
 
-.note-container {
+.note-container-1 {
   width: 40%;
 }
 
-.add-traveller-container {
+.add-traveller-container-1 {
   margin-top: 1rem;
   text-align: center;
 }
 
-.travellers-container {
+.travellers-container-1 {
   width: 60%;
   padding-top: 2rem;
 }
 
-.traveller-details-popup {
+.traveller-details-popup-1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@
   align-items: center;
 }
 
-.traveller-details-popup-container {
+.traveller-details-popup-container-1 {
   background-color: #fff;
   width: 400px;
   padding: 1rem;
@@ -48,14 +48,14 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-.add-traveller-container {
+.add-traveller-container-1 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: first baseline;
   margin-top: 2rem;
 }
-.traveller-box {
+.traveller-box-1 {
   /* display: flex;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   flex-direction: column;
@@ -74,12 +74,12 @@
   width: 30.8cm;
 }
 
-.add-traveller-heading {
+.add-traveller-heading-1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.add-traveller-button {
+.add-traveller-button-1 {
   background-color: #008080;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -90,11 +90,11 @@
   margin-bottom: 1rem;
 }
 
-.add-traveller-button:hover {
+.add-traveller-button-1:hover {
   background-color: #006666;
 }
 
-.traveller-details-box {
+.traveller-details-box-1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
@@ -105,7 +105,7 @@
   background-color: #f2f2f2;
 }
 
-.small-box {
+.small-box-1 {
   width: 30%;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -114,21 +114,21 @@
   /* flex-basis: 30%; */
 }
 
-.small-box h2 {
+.small-box-1 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.small-box ul {
+.small-box-1 ul {
   margin-top: 0.5rem;
 }
 
-.small-box li {
+.small-box-1 li {
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.train-card {
+.train-card-1 {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -139,39 +139,39 @@
   margin-bottom: -1rem;
 }
 
-.train-card h2 {
+.train-card-1 h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.train-card-info {
+.train-card-info-1 {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
 
-.train-card-info div {
+.train-card-info-1 div {
   display: flex;
   flex-direction: column;
 }
 
-.train-card-info div span {
+.train-card-info-1 div span {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.train-card-info div p {
+.train-card-info-1 div p {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
-.train-card-img {
+.train-card-img-1 {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
 }
 
-.train-card-img img {
+.train-card-img-1 img {
   width: 70%;
   border-radius: 5px;
 }
