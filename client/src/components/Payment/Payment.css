@@ -1,0 +1,116 @@
+.booking-container {
+  margin-right: 150px;
+  /* border-radius: 5px; */
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
+  /* padding: 20px; */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px #ccc;
+  padding: 20px;
+  margin-top: -342px;
+}
+.add-traveller-container {
+  /* position: absolute; */
+  /* bottom: 5cm; */
+  /* left: 4rem; */
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: rgb(240, 245, 255);
+  box-shadow: 0px 0px 10px #ccc;
+  width: 25cm;
+  margin-left: 174px;
+  /* WIDTH: 36.8CM; */
+}
+
+.small-box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  width: 328px;
+  margin-top: -12rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  content: "\2713";
+  margin-right: 0.5rem;
+}
+
+.add-traveller-heading {
+  text-align: left;
+}
+
+.add-traveller-button {
+  background-color: #008080; /* green background color */
+  color: #fff; /* white text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  width: 19.8cm;
+  left: 1rem;
+  margin-right: 5px; /* to add some space between the icon and the button text */
+}
+
+.add-traveller-button:hover {
+  background-color: #006666; /* darker shade of green on hover */
+}
+
+.booking-button {
+  width: 17rem;
+  margin: 1.4rem;
+  padding: 0.445rem;
+  background-color: #008080;
+  color: white;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.booking-button:hover {
+  background-color: #006666;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-detail-left {
+  text-align: left;
+  flex: 1;
+}
+
+.booking-detail-right {
+  flex: 1;
+  text-align: right;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+}

@@ -1,65 +1,74 @@
-import React from 'react';
-import './Booking.css'
-import { FaPlus } from 'react-icons/fa';
-import TrainCard from '../../components/TrainCard/TrainCard';
+// import React, { useState } from "react";
+// import TrainCard from "./TrainCard2";
+// import BookingMain from "./BookingMain";
+// import "./BookingMainActualFINAL.css";
+// import Payment from "./Payment";
 
-const PaymentBox = ({ price }) => {
-  const handlePayClick = () => {
-    // Handle payment logic here
-    console.log('Payment processed successfully!');
-  };
+// const BookingMainPage = () => {
+//   return (
+//     <div className="grid-container">
+//       <div className="traincard">
+//         <TrainCard />
+//       </div>
+//       <div className="payment">
+//         <Payment />
+//       </div>
+//       <div className="traveller-card">
+//         <BookingMain />
+//       </div>
+//       <div className="note">
+//         <div className="small-box">
+//           <h2>Note</h2>
+//           <ul style={{ listStyleType: "disc", marginLeft: "1.5rem" }}>
+//             <li>No cancellation policy</li>
+//             <li>Pay on meal policy</li>
+//             <li>Book from Tiko for better offers</li>
+//           </ul>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
+// export default BookingMainPage;
+import React, { useState } from "react";
+import TrainCard from "../../components/TrainCard2/TrainCard2";
+import BookingMain from "../../components/Traveller-details/BookingMain";
+import "./Booking.css";
+import Payment from "../../components/Payment/Payment";
+
+import Footer from "../../components/BottomNavbar/BottomNavbar";
+import Navbar from "../../components/Navbar/Navbar";
+const BookingMainPage = () => {
   return (
-    <div>
-      <TrainCard/>
-    <div className='booking-container'>
-      <button onClick={handlePayClick} className='booking-button'>Pay</button>
-      <hr />
-      <h3 className='booking-title'>Order Summary</h3>
-      <div className='booking-details'>
-        <div className='booking-detail-left'>
-          <p>Base Fare for Adult:</p>
-          <p>Tax:</p>
-          <p>Tatkal Fare:</p>
-          <hr></hr>
-          <p><strong>Total Price per Adult</strong></p>
-        </div>
-        <div className='booking-detail-right'>
-          <p>${price}</p>
-          <p>$0</p>
-          <p>${price}</p>
-          <hr />
-          <p><strong>${price}</strong></p>
+    <>
+      <div>
+        <Navbar />
+      </div>
+      <div className="traincard">
+        <TrainCard />
+      </div>
+      <div className="payment">
+        <Payment />
+      </div>
+      <div className="traveller-card">
+        <BookingMain />
+      </div>
+      <div className="note">
+        <div className="small-box">
+          <h2>Note</h2>
+          <ul style={{ listStyleType: "disc", marginLeft: "1.5rem" }}>
+            <li>No cancellation policy</li>
+            <li>Pay on meal policy</li>
+            <li>Book from Tiko for better offers</li>
+          </ul>
         </div>
       </div>
+      <div>
+        <Footer />
       </div>
-      <div className="small-box">
-  <h2>Note</h2>
-  <ul style={{ listStyleType: 'disc', marginLeft: '1.5rem' }}>
-    <li>No cancellation policy</li>
-    <li>Pay on meal policy</li>
-    <li>Book from Tiko for better offers</li>
-  </ul>
-</div>
-      <div className="add-traveller-container">
-      <h3 class="add-traveller-heading">Add Traveller and Preferences</h3>
-      <button className="add-traveller-button">
-        <FaPlus style={{ marginRight: '5px' }} />
-        Add Traveller
-      </button>
-     </div>
-    </div>
-
-    
+    </>
   );
 };
 
-const PaymentBoxContainer = ({ price }) => {
-  return (
-    <div className='payment-container'>
-      <PaymentBox price={price} />
-    </div>
-  );
-};
-
-export default PaymentBoxContainer;
+export default BookingMainPage;
