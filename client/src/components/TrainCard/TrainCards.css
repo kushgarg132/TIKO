@@ -39,9 +39,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
+  width: 200px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: 20px;
   background-color: #d9d9d9;
   margin-right: 5px;
 }
@@ -49,7 +49,8 @@
 .day-label {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: #373737;
+  margin-left: -3px;
 }
 
 .train-card-body {
@@ -158,7 +159,7 @@
 .train-subscriptions {
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 68px;
 }
 
 .train-subscription {
@@ -198,7 +199,7 @@
   font-size: 14px;
   font-weight: bold;
   color: #555;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .subscription-cancellation {

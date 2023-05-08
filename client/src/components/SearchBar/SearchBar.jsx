@@ -6,12 +6,11 @@ import { useDispatch } from "react-redux";
 import { format, addMonths } from 'date-fns';
 import { getAllTrains } from '../../actions/trains';
 import { Navigate, useNavigate } from 'react-router-dom';
+
 const SearchBox = () => {
   const [fromCity, setFromCity] = useState('');
   const [toCity, setToCity] = useState('');
   const [departureDate, setDepartureDate] = useState('');
-  const [returnDate, setReturnDate] = useState('');
-  const [passengerCount, setPassengerCount] = useState(1);
   const navigate= useNavigate();
 
   const dispatch = useDispatch();
