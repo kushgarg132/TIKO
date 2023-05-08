@@ -33,9 +33,9 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar__logo">
         <a href="/">
-          <img src="logo.webp" alt="Train Ticket Reservation" />
+          <img src="LogoTiko.png" alt="Train Ticket Reservation" />
         </a>
-     </div>
+      </div>
 
       <div className={`navbar__toggle ${showMenu ? "active" : ""}`} onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />
