@@ -1,0 +1,64 @@
+.traveller-details {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.traveller-details h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.traveller-details form {
+  display: flex;
+  flex-direction: column;
+}
+
+.traveller-details label {
+  margin-bottom: 10px;
+}
+
+.traveller-details input,
+.traveller-details select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.traveller-details select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231d3c5d'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  background-size: 20px 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.buttons-container button:first-of-type {
+  background-color: #ccc;
+}
+
+.buttons-container button:last-of-type {
+  background-color: #1d3c5d;
+}

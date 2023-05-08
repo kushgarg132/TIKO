@@ -1,135 +1,33 @@
-.booking-container {
-    margin-right: 8rem;
-    margin-top: 8rem;
-    border: 1px solid;
-    padding-bottom: 2.3rem;
-  right:1rem;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0px 0px 10px #ccc;
-  padding: 20px;
- 
-}
-.add-traveller-container {
-    position: absolute;
-    bottom: 5cm;
-    left: 4rem;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid;
-    border-color: rgb(240, 245, 255);
-    box-shadow: 0px 0px 10px #ccc;
-    width: 22cm;
-    
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "traincard payment"
+    "traveller-card note";
+  grid-gap: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  grid-auto-rows: minmax(100px, auto);
+} */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
-.small-box {
-  background-color:  #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  width: 325px;
-  margin-top: 2rem;
- 
+.traincard {
+  margin-bottom: 20px; /* or any other value that suits your layout */
+  margin-top: 60px;
+  height: fit-content;
 }
 
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
- 
-  
+.traveller-card {
+  margin-top: 20px;
 }
 
-li {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #666;
-  content: "\2713";
-  margin-right: 0.5rem;
+.payment,
+.traveller-card,
+.note {
+  margin-top: 60px; /* Set margin-top value according to your navbar height */
 }
-
-.add-traveller-heading {
-    text-align: left;
-  }
-  
-  .add-traveller-button {
-    background-color: #008080; /* green background color */
-    color: #FFF; /* white text color */
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-    width: 19.8cm;
-    left: 1rem;
-    margin-right: 5px; /* to add some space between the icon and the button text */
-    
-  }
-  
-  .add-traveller-button:hover {
-    background-color:#006666; /* darker shade of green on hover */
-  }
-  
-.booking-button {
-    width: 17rem;
-    margin: 1.4rem;
-    padding: .445rem;
-    background-color: #008080;
-  color: white;
-  border: 1px solid;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 10px 20px;
-  cursor: pointer;
-  
-}
-
-.booking-button:hover {
-    background-color: #006666;
-  }
-
-
-.booking-details {
-    display: flex;
-    flex-direction: row;
-    display: flex;
-  justify-content: space-between;
-  align-items: center;
-  }
-  
- 
-.booking-detail-left {
-    text-align: left;
-    flex: 1;
-  }
-  
-  
-  
-  .booking-detail-right {
-   
-    flex: 1;
-  text-align: right;
-  }
-  
-  
-
-  
-  .payment-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  
-  hr {
-    border: none;
-    border-bottom: 1px solid #ddd;
-    
-  }
-  
