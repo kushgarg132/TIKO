@@ -1,4 +1,4 @@
-.train-card {
+.train-card-1 {
   width: 100%;
   background-color: #fff;
   border-radius: 4px;
@@ -6,7 +6,7 @@
   overflow: hidden;
 }
 
-.train-card-header {
+.train-card-header-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,22 +14,22 @@
   background-color: #f4f4f4;
 }
 
-.train-name {
+.train-name-1 {
   font-size: 16px;
   font-weight: bold;
   color: #333;
 }
 
-.train-number {
+.train-number-1 {
   font-size: 14px;
   color: #555;
 }
 
-.train-days {
+.train-days-1 {
   display: flex;
 }
 
-.train-day {
+.train-day-1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,20 +40,20 @@
   margin-right: 5px;
 }
 
-.day-label {
+.day-label-1 {
   font-size: 14px;
   font-weight: bold;
   color: #fff;
 }
 
-.train-card-body {
+.train-card-body-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
 
-.train-info {
+.train-info-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -61,7 +61,7 @@
   padding: 50px;
 }
 
-.train-info-left {
+.train-info-left-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,7 +69,7 @@
   margin-right: 20px;
 }
 
-.train-info-left-left {
+.train-info-left-left-1 {
   .left-left {
     font-size: 1.5rem;
     font-weight: bold;
@@ -84,7 +84,7 @@
     border: 1px solid #ccc;
   }
 }
-.train-info-right-right {
+.train-info-right-right-1 {
   .left-left {
     font-size: 1.5rem;
     font-weight: bold;
@@ -100,18 +100,18 @@
   }
 }
 
-.train-departure-time {
+.train-departure-time-1 {
   font-size: 24px;
   font-weight: bold;
   color: #333;
 }
 
-.train-departure-station {
+.train-departure-station-1 {
   font-size: 14px;
   color: #555;
 }
 
-.train-info-middle {
+.train-info-middle-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,43 +119,43 @@
   margin-right: 20px;
 }
 
-.train-duration {
+.train-duration-1 {
   font-size: 16px;
   font-weight: bold;
   color: #333;
 }
 
-.train-view-route {
+.train-view-route-1 {
   font-size: 14px;
   color: #0071e6;
   cursor: pointer;
 }
 
-.train-info-right {
+.train-info-right-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.train-arrival-time {
+.train-arrival-time-1 {
   font-size: 24px;
   font-weight: bold;
   color: #333;
 }
 
-.train-arrival-station {
+.train-arrival-station-1 {
   font-size: 14px;
   color: #555;
 }
 
-.train-subscriptions {
+.train-subscriptions-1 {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
 }
 
-.train-subscription {
+.train-subscription-1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -165,53 +165,53 @@
   border-radius: 4px;
 }
 
-.subscription-left {
+.subscription-left-1 {
   display: flex;
   flex-direction: column;
 }
 
-.subscription-class {
+.subscription-class-1 {
   font-size: 16px;
   font-weight: bold;
   color: #333;
 }
 
-.subscription-price {
+.subscription-price-1 {
   font-size: 14px;
   color: #555;
 }
 
-.subscription-right {
+.subscription-right-1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.subscription-availability {
+.subscription-availability-1 {
   font-size: 14px;
   font-weight: bold;
   color: #555;
   margin-bottom: 5px;
 }
 
-.subscription-cancellation {
+.subscription-cancellation-1 {
   font-size: 12px;
   color: #666;
   margin-bottom: 5px;
 }
 
-.subscription-updated {
+.subscription-updated-1 {
   font-size: 12px;
   color: #666;
   margin-bottom: 5px;
 }
 
-.train-options {
+.train-options-1 {
   display: flex;
   justify-content: flex-end;
 }
 
-.train-options-dropdown {
+.train-options-dropdown-1 {
   background-color: #f5f5f5;
   padding: 8px;
   border-radius: 4px;
@@ -221,13 +221,13 @@
   cursor: pointer;
 }
 
-.dropdown-label {
+.dropdown-label-1 {
   font-size: 14px;
   color: #555;
   margin-right: 5px;
 }
 
-.dropdown-arrow {
+.dropdown-arrow-1 {
   width: 0;
   height: 0;
   border-style: solid;

@@ -1,3 +1,8 @@
+import React, { useState } from "react";
+import TrainCard from "../../components/TrainCard/TrainCard";
+// import BookingMain from "../../components/Traveller-details/BookingMain";
+import "./Booking.css";
+import Payment from "../../components/Payment/Payment";
 import React from 'react';
 import './Booking.css'
 import { FaPlus } from 'react-icons/fa';
@@ -38,33 +43,23 @@ const PaymentBox = ({ price }) => {
           <p><strong>${price}</strong></p>
         </div>
       </div>
+      <div className="traveller-card">
+        <BookingMain />
       </div>
-      <div className="small-box">
-  <h2>Note</h2>
-  <ul style={{ listStyleType: 'disc', marginLeft: '1.5rem' }}>
-    <li>No cancellation policy</li>
-    <li>Pay on meal policy</li>
-    <li>Book from Tiko for better offers</li>
-  </ul>
-</div>
-      <div className="add-traveller-container">
-      <h3 class="add-traveller-heading">Add Traveller and Preferences</h3>
-      <button className="add-traveller-button">
-        <FaPlus style={{ marginRight: '5px' }} />
-        Add Traveller
-      </button>
-     </div>
-    </div>
-
-    
-  );
-};
-
-const PaymentBoxContainer = ({ price }) => {
-  return (
-    <div className='payment-container'>
-      <PaymentBox price={price} />
-    </div>
+      <div className="note">
+        <div className="small-box">
+          <h2>Note</h2>
+          <ul style={{ listStyleType: "disc", marginLeft: "1.5rem" }}>
+            <li>No cancellation policy</li>
+            <li>Pay on meal policy</li>
+            <li>Book from Tiko for better offers</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
