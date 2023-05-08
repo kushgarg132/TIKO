@@ -3,7 +3,7 @@ import SearchBo from "../../components/SearchBar/SearchB";
 import Navbar from "../../components/Navbar/Navbar";
 import TrainCard from "../../components/TrainCard/TrainCard";
 import FilteringComponent from "./Filters";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Availability = () => {
@@ -14,6 +14,10 @@ const Availability = () => {
   console.log(trains);
   const trainData = trains.data;
 
+  const {fromCity,toCity} = useParams();
+
+  console.log(fromCity);
+  console.log(toCity);
   return (
     <>
         <Navbar/>
@@ -22,7 +26,7 @@ const Availability = () => {
           <FilteringComponent/>
         </div>
         {trainData.map(train => (
-        <TrainCard train={train} />
+        <TrainCard train={train} fromCity={fromCity} toCity={toCity}/>
       ))}
     </>
   );
