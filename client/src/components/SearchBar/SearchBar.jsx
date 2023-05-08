@@ -34,7 +34,7 @@ const handleDepartureDateChange = (event) => {
     // console.log(source);
     console.log(day)
     dispatch(getTrain({fromCity,toCity,day,today}));
-    navigate("/avail");
+    navigate("/avail/"+fromCity+"/"+toCity);
   };
 
   const handleSwap = () => {
