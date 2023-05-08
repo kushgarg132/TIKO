@@ -12,36 +12,47 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { format, addMonths } from 'date-fns';
 import {
-    
-    Input,
-    FormControl,
-    InputLabel,
-    Select,
-    MenuItem,
-    Radio,
-    RadioGroup,
-    FormLabel,
-    
-    Stack,
-    DatePicker,
-  } from '@mui/material';
+  Input,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Radio,
+  RadioGroup,
+  FormLabel,
+  Stack,
+  DatePicker,
+} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { signup } from "../actions/auth";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
 export default function SignUp() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [gender,setGender] = React.useState('');
+
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-      fname: data.get('fname'),
-      lname: data.get('lname'),
-      phone: data.get('phone'),
-      dob: data.get('dob'),
 
-    });
+    const email = data.get('email');
+    const fname = data.get('fname');
+    const password = data.get('password');
+    const lname = data.get('lname');
+    const mobile = data.get('phone');
+    const dob = data.get('dob');
+    const name = fname + " " + lname;
+
+    dispatch(signup({ name, email, password, mobile,gender, dob }, navigate));
   };
 
   return (
@@ -68,35 +79,35 @@ export default function SignUp() {
               mx: 5,
               display: 'flex',
               flexDirection: 'column',
-              
+
             }}
           >
-            
+
             <Typography component="h1" variant="h5">
               Register
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{width:470, mt: 1}}>
-            <TextField
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ width: 470, mt: 1 }}>
+              <TextField
                 margin="normal"
                 required
-                
+
                 id="fname"
                 label="First Name"
                 name="fname"
                 autoComplete="fname"
                 autoFocus
-                sx={{m:1}}
+                sx={{ m: 1 }}
               />
-               <TextField
+              <TextField
                 margin="normal"
                 required
-                
+
                 id="lname"
                 label="Last Name"
                 name="lname"
                 autoComplete="lname"
                 autoFocus
-                sx={{m:1}}
+                sx={{ m: 1 }}
               />
 
               <TextField
@@ -132,39 +143,39 @@ export default function SignUp() {
                 autoComplete="current-password"
               />
 
-              
-            
-<FormControl sx={{ m: 1 }}>
-  <FormLabel id="demo-controlled-radio-buttons-group">Gender:</FormLabel>
-  <RadioGroup
-    aria-labelledby="demo-controlled-radio-buttons-group"
-    name="controlled-radio-buttons-group"
-    row
-  >
-    <FormControlLabel value="female" control={<Radio />} label="Female" />
-    <FormControlLabel value="male" control={<Radio />} label="Male" />
-  </RadioGroup>
-</FormControl>
+              <FormControl sx={{ m: 1 }}>
+                <FormLabel id="demo-controlled-radio-buttons-group">Gender:</FormLabel>
+                <RadioGroup
+                  aria-labelledby="demo-controlled-radio-buttons-group"
+                  name="controlled-radio-buttons-group"
+                  row
+                  value={gender}
+                  onChange={handleGenderChange}
+                >
+                  <FormControlLabel value="Female" control={<Radio />} label="Female" />
+                  <FormControlLabel value="Male" control={<Radio />} label="Male" />
+                </RadioGroup>
+              </FormControl>
 
-<FormControl sx={{ m: 1 }}>
-  Date of birth:
-  <Input
-    type="date"
-    id="dob"
-    max={format(addMonths(new Date(), 4), 'yyyy-MM-dd')}
-    name="dob"
+              <FormControl sx={{ m: 1 }}>
+                Date of birth:
+                <Input
+                  type="date"
+                  id="dob"
+                  max={format(addMonths(new Date(), 4), 'yyyy-MM-dd')}
+                  name="dob"
 
-    required
-  />
-</FormControl>
+                  required
+                />
+              </FormControl>
 
 
-                 <br />
-             
+              <br />
+
               <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                 Sign Up
               </Button>
-              
+
             </Box>
           </Box>
         </Grid>

@@ -51,7 +51,7 @@ const TrainSchema = new Schema(
                 required: true
             },
             arrivalDay:{
-                type: String,
+                type: Number,
                 required: true
             },
             arrivalTime: {

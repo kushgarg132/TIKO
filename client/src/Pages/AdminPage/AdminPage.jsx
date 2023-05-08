@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import "./AdminPage.css";
+import Navbar from "../../components/Navbar/Navbar";
 
 function AdminPage() {
   const [file, setFile] = useState(null);
@@ -37,6 +38,8 @@ function AdminPage() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="admin-container">
       <div className="admin-page">
         <h1>Admin Page</h1>
@@ -54,7 +57,7 @@ function AdminPage() {
           </div>
         )}
       </div>
-    </div>
+    </div></>
   );
 }
 

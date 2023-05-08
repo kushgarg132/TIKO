@@ -4,6 +4,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import BottomNavbar from "../../components/BottomNavbar/BottomNavbar"
 import FAQSection from "./Faq/Faq";
 
+
+
 const Home = () => {
   
 

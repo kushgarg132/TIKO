@@ -2,8 +2,6 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    
-    userId: { type: String, unique: true },
     name: {
         type: String,
         required: true,
@@ -28,6 +26,9 @@ const UserSchema = new Schema({
         type: Date,
         required: false,
     },
-});
+    is_admin: {
+        type: Boolean,
+    },
+}, { collection: "UserData" });
 
-export default mongoose.model("Users", UserSchema);
+export default mongoose.model("UserData", UserSchema);

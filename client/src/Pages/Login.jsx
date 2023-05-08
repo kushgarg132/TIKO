@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,19 +15,39 @@ import Grid from '@mui/material/Grid';
 
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { login } from "../actions/auth";
 
 
 
 const theme = createTheme();
 
 export default function SignInSide() {
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  function validateEmail(email) {
+    const reg = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,4})$/;
+    if (reg.test(email) === false) {
+      return false;
+    } else return true;
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const email=data.get('email');
+    const password=data.get('password');
+    
+    if (!email && !password) {
+      alert("Enter email and password");
+    }else if(!validateEmail(email))
+        alert("Enter email and password");
+  
+    dispatch(login({ email, password }, navigate));
   };
 
   return (

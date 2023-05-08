@@ -3,9 +3,16 @@ import SearchBo from "../../components/SearchBar/SearchB";
 import Navbar from "../../components/Navbar/Navbar";
 import TrainCard from "../../components/TrainCard/TrainCard";
 import FilteringComponent from "./Filters";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Availability = () => {
-  
+  const location = useLocation();
+  const user = 1;
+  const navigate = useNavigate();
+  const trains = useSelector((state) => state.trainsReducer);
+  console.log(trains);
+  const trainData = trains.data;
 
   return (
     <>
@@ -14,10 +21,9 @@ const Availability = () => {
           <SearchBo/>
           <FilteringComponent/>
         </div>
-        <TrainCard/>
-        <TrainCard/>
-
-
+        {trainData.map(train => (
+        <TrainCard train={train} />
+      ))}
     </>
   );
 };

@@ -1,15 +1,9 @@
 .train-card {
-  width: 68%;
-  margin-left: 218px;
-  margin-top: 85px;
+  width: 100%;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  border: 1px solid #ddd;
-  left: 8rem;
-  /* margin-left: 132px;
-  margin-top: -132px; */
 }
 
 .train-card-header {
@@ -39,9 +33,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 30px;
   height: 30px;
-  border-radius: 20px;
+  border-radius: 50%;
   background-color: #d9d9d9;
   margin-right: 5px;
 }
@@ -49,8 +43,7 @@
 .day-label {
   font-size: 14px;
   font-weight: bold;
-  color: #373737;
-  margin-left: -3px;
+  color: #fff;
 }
 
 .train-card-body {
@@ -159,7 +152,7 @@
 .train-subscriptions {
   display: flex;
   flex-direction: column;
-  margin-right: 68px;
+  margin-right: 20px;
 }
 
 .train-subscription {
@@ -175,7 +168,6 @@
 .subscription-left {
   display: flex;
   flex-direction: column;
-  padding-right: 10px;
 }
 
 .subscription-class {
@@ -199,7 +191,7 @@
   font-size: 14px;
   font-weight: bold;
   color: #555;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
 }
 
 .subscription-cancellation {
