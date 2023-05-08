@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__section">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>TIKO is a railway ticket booking system that simulates IRCTC by enabling users to book and manage train tickets.</p>
         </div>
         <div className="footer__section">
           <h3>Contact Us</h3>
@@ -34,7 +34,7 @@ function Footer() {
         </div> */}
       </div>
       <div className="footer__bottom">
-        <p>&copy; 2023 Train Ticket Booking. All rights reserved.</p>
+        <p>&copy; 2023 TIKO. All rights reserved.</p>
       </div>
     </footer>
   );

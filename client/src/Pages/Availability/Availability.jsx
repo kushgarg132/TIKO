@@ -16,10 +16,7 @@ const Availability = () => {
 
   return (
     <>
-
         <Navbar/>
-        {console.log(trainData)}
-        {console.log("Bye")}
         <div style={{ display: 'flex' }}>
           <SearchBo/>
           <FilteringComponent/>
@@ -27,9 +24,6 @@ const Availability = () => {
         {trainData.map(train => (
         <TrainCard train={train} />
       ))}
-        
-
-
     </>
   );
 };
