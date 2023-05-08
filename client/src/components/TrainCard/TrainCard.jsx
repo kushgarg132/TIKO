@@ -21,9 +21,9 @@ const TrainCard = (props) => {
         <div className="train-number">#{props.train.trainNumber}</div>
         <div className="train-days">
           <div className="train-day">
-            <span className="day-label">S</span>
+            <span className="day-label">{props.train.journeyDay}</span>
           </div>
-          <div className="train-day">
+          {/* <div className="train-day">
             <span className="day-label">M</span>
           </div>
           <div className="train-day">
@@ -40,13 +40,15 @@ const TrainCard = (props) => {
           </div>
           <div className="train-day">
             <span className="day-label">S</span>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="train-card-body">
         <div className="train-info">
           <div className="train-info-left">
-            <div className="train-departure-time">{props.train.route[0].departureTime}</div>
+            <div className="train-departure-time">
+              {props.train.route[0].departureTime}
+            </div>
             <div className="train-departure-station">
               {props.train.route[0].stationName}
             </div>
@@ -58,9 +60,11 @@ const TrainCard = (props) => {
           </div>
           <div className="train-info-right-right">➔</div>
           <div className="train-info-right">
-            <div className="train-arrival-time">{props.train.route[props.train.route.length-1].arrivalTime}</div>
+            <div className="train-arrival-time">
+              {props.train.route[props.train.route.length - 1].arrivalTime}
+            </div>
             <div className="train-arrival-station">
-              {props.train.route[props.train.route.length-1].stationName}
+              {props.train.route[props.train.route.length - 1].stationName}
             </div>
           </div>
         </div>
@@ -72,9 +76,8 @@ const TrainCard = (props) => {
             </div>
             <div className="subscription-right">
               <div className="subscription-availability available">
-                {/* Available: {props.train.sleeper} */}
+                Available: {props.train.sleeperCoaches[0].capacity}
               </div>
-              
             </div>
           </div>
           <div className="train-subscription">
@@ -84,9 +87,8 @@ const TrainCard = (props) => {
             </div>
             <div className="subscription-right">
               <div className="subscription-availability available">
-                {/* Available: {props.train.ac} */}
+                Available: {props.train.acCoaches[0].capacity}
               </div>
-              
             </div>
           </div>
         </div>
