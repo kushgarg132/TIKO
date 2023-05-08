@@ -7,6 +7,7 @@ function App() {
     <div className="wrapper">
       <div className="box">
         <h6>Welcome Kush!</h6>
+        <h6>To TIKO!!</h6>
               <div className="dropdown">
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                  <Link className="dropdown-item" to="/profile">Your Profile</Link>
