@@ -17,6 +17,10 @@ const TicketSchema = new Schema({
             userGender: {
                 type: String,
                 required: true
+            },
+            seatNumber:{
+                type:String,
+                required: true
             }
         }
     ],
