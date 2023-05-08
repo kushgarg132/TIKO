@@ -51,7 +51,7 @@ const TicketSchema = new Schema({
     price: {
         type: Number,
         required: true,
-    },
+    }
 }, { collection: "ticket" });
 
 export default mongoose.model("ticket", TicketSchema);

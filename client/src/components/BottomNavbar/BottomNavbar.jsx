@@ -12,9 +12,9 @@ function Footer() {
         </div>
         <div className="footer__section">
           <h3>Contact Us</h3>
-          <p>Email: info@trainticketbooking.com</p>
-          <p>Phone: +1 (555) 555-5555</p>
-          <p>Address: 123 Main Street, Anytown USA</p>
+          <p>Email: info@tiko.com</p>
+          <p>Phone: +91-8541939746</p>
+          <p>Address: Sus, Pune</p>
         </div>
         <div className="footer__section">
           <h3>Follow Us</h3>
