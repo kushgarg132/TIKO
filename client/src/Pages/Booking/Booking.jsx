@@ -32,13 +32,13 @@
 
 // export default BookingMainPage;
 import React, { useState } from "react";
-import TrainCard from "../../components/Navbar/Navbar";
+import TrainCard from "../../components/TrainCard2/TrainCard2";
 import BookingMain from "../../components/Traveller-details/BookingMain";
 import "./Booking.css";
 import Payment from "../../components/Payment/Payment";
 
 import Footer from "../../components/BottomNavbar/BottomNavbar";
-import Navbar from "../../components/Navbar/Navbar ";
+import Navbar from "../../components/Navbar/Navbar";
 const BookingMainPage = () => {
   return (
     <>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./BookingMain.css";
 import { FaPlus } from "react-icons/fa";
-import TrainCard from "./TrainCard2";
-import TravellerDetails from "./TravellerDetails";
+// import TrainCard from "./TrainCard2";
+import TravellerDetails from "../../components/Traveller-details/BookingMain";
 
 const BookingMain = () => {
   const [showTravellerDetails, setShowTravellerDetails] = useState(false);
