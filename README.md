@@ -37,7 +37,7 @@ The Tiko Railway Reservation System is a project aimed at simplifying and automa
 3. Install the dependencies:
 
    ```shell
-   npm install
+   npm run installAll
    ```
 
 4. Set up the database:

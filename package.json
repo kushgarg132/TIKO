@@ -4,6 +4,7 @@
   "description": "The Tiko Railway Reservation System is a project aimed at simplifying and automating the process of booking and managing railway tickets. It provides a user-friendly interface for passengers to search for trains, view seat availability, make reservations, and manage their bookings. The system also includes an administrative module for managing train schedules, fares, and other related data.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "installAll": "npm install && npm install --prefix client && npm install --prefix server",
     "server": "node server/index.js",
     "client": "npm start --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\""
