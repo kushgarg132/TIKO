@@ -1,0 +1,24 @@
+{
+  "name": "tiko",
+  "version": "1.0.0",
+  "description": "The Tiko Railway Reservation System is a project aimed at simplifying and automating the process of booking and managing railway tickets. It provides a user-friendly interface for passengers to search for trains, view seat availability, make reservations, and manage their bookings. The system also includes an administrative module for managing train schedules, fares, and other related data.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server/index.js",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushgarg132/TIKO.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kushgarg132/TIKO/issues"
+  },
+  "homepage": "https://github.com/kushgarg132/TIKO#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

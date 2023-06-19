@@ -1,9 +1,8 @@
 import React from "react";
 import "./TrainCards.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
-import { getTrain } from '../../actions/trains';
 
 const TrainCard = (props) => {
   const history=useNavigate()

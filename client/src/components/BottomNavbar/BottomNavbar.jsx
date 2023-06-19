@@ -25,13 +25,6 @@ function Footer() {
             <li><a href="#"><FaLinkedin /></a></li>
           </ul>
         </div>
-        {/* <div className="footer__section">
-          <h3>Newsletter</h3>
-          <form className="footer__form">
-            <input type="email" placeholder="Enter your email" />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div> */}
       </div>
       <div className="footer__bottom">
         <p>&copy; 2023 TIKO. All rights reserved.</p>

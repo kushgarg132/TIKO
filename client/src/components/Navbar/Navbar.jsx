@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { setCurrentUser } from "../../actions/currentUser";
 import decode from "jwt-decode";
 import {
-
   faUser,
-
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
+
+import LOGO from "../../assets/LogoTiko.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -56,7 +56,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar__logo">
         <a href="/">
-          <img src="LogoTiko.png" alt="Train Ticket Reservation" />
+          <img src={LOGO} alt="Train Ticket Reservation" />
         </a>
       </div>
 
@@ -79,29 +79,33 @@ const Navbar = () => {
         </li> */}
       </ul>
 
-      {User === null  ? (
+      {User === null ? (
         <div className="navbar__actions">
-        <a href="/login" className="navbar__user-link">
-          <FontAwesomeIcon
-            icon={faUser}
-            className="navbar__user-icon"
-          />
-          <span className="navbar__user-name">Login/Signup</span>
-        </a>
-      </div>
-      ) : (<>
-        <div className="navbar__actions">
-        <a onClick={()=>handleLogout()} className="navbar__user-link">
-          <FontAwesomeIcon
-            icon={faUser}
-            className="navbar__user-icon"
-          />
-          {console.log(User)}
-          <span className="navbar__user-name">{User.result.name}</span>
-        </a>
-      </div>
-      </>) }
-      
+          <a href="/login" className="navbar__user-link">
+            <FontAwesomeIcon
+              icon={faUser}
+              className="navbar__user-icon"
+            />
+            <span className="navbar__user-name">Login/Signup</span>
+          </a>
+        </div>
+      ) : (
+      <>
+        <div className="wrapper">
+          <div className="box">
+            <h6>Welcome {User.result.name}</h6>
+            <h6>To TIKO!!</h6>
+            <div className="dropdown">
+              <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <Link className="dropdown-item" to="/profile">Your Profile</Link>
+
+                <button className="dropdown-item" onClick={()=>handleLogout()}>Log Out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>)}
+
     </nav>
   );
 };

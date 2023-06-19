@@ -14,7 +14,6 @@ export const signup = (authData, navigate) => async (dispatch) => {
 
 export const login = (authData, navigate) => async (dispatch) => {
   try {
-    // console.log("HII");
     const { data } = await api.logIn(authData);
     console.log(data);
     dispatch({ type: "AUTH", data });

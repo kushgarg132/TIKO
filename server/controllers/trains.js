@@ -1,5 +1,4 @@
 import Trains from "../models/Train.js";
-import mongoose from "mongoose";
 
 export const getAllTrains = async (req, res) => {
   try {

@@ -2,7 +2,6 @@ import * as api from "../api";
 
 export const getAllTrains = () => async (dispatch) => {
   try {
-    // console.log("hii");
     const { data } = await api.getAllTrains();
     console.log(data);
     dispatch({ type: "FETCH_TRAINS", payload:data });
@@ -12,13 +11,9 @@ export const getAllTrains = () => async (dispatch) => {
 };
 
 export const getTrain = (trainData) => async (dispatch) => {
-  // console.log("HII");
-  // console.log(trainData);
   const {fromCity,toCity,day,today} = trainData;
   const DAYS = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   try {
-    // console.log(fromCity);
-    // console.log(toCity);
     const { data } = await api.getAllTrains();
     const filteredTrains = data.filter(train => {
       var check_source=false;
@@ -38,9 +33,7 @@ export const getTrain = (trainData) => async (dispatch) => {
 
     dispatch({ type: "FETCH_TRAINS", payload: filteredTrains });
     
-    // Rest of the code...
   } catch (error) {
-    // Handle error...
     console.log(error);
   }
 };

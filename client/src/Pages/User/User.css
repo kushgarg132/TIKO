@@ -1,0 +1,43 @@
+.user-profile-box {
+    width: 600px;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to bottom right, #FFC0CB, #87CEFA);
+  }
+  
+  .user-profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .user-profile-field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+  }
+  
+  .field-label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .field-value {
+    margin-left: 1rem;
+  }

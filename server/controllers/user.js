@@ -1,7 +1,6 @@
 import Users from "../models/User.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
-import moment from "moment";
 
 export const signup = async (req, res) => {
     const { name, email, password ,mobile,gender,dob} = req.body;
@@ -23,12 +22,13 @@ export const signup = async (req, res) => {
         dob,
         is_admin:false
       });
-      console.log("biiii");
+
       const token = jwt.sign(
         { email: newUser.email, id: newUser._id },
         process.env.JWT_SECRET,
         { expiresIn: "1h" }
       );
+      
       res.status(200).json({ result: newUser, token });
     } catch (error) {
       res.status(500).json("Something went worng...");
@@ -55,7 +55,6 @@ export const login = async (req, res) => {
     } catch (error) {
         res.status(500).json("Something went worng...");
     }
-
 };
 
 export const profile = async (req, res) => {
