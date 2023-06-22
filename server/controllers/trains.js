@@ -10,13 +10,34 @@ export const getAllTrains = async (req, res) => {
 };
 
 export const getTrain = async (req, res) => {
-  const { source, dest, day } = req.body;
-
+  let { source, dest, day } = req.body;
+  // source = 'Amritsar';
+  // dest = 'Jammu';
+  // day = 'Tuesday';
   try {
-    const trainList = await Trains.find(
-      {stationCode:source , }
-    );
-    res.status(200).json(trainList);
+    // const trains = await Trains.find({});
+
+    const trains = await Trains.find({
+      journeyDay: { $elemMatch: { $eq: day } }
+    });
+
+    for (let i = 0; i < trains.length; i++) {
+      let flag = -1;
+      for (let j = 0; j < trains[i].route.length; j++) {
+        if (trains[i].route[j].stationName == source) {
+          flag = j;
+          break;
+        }
+      }
+
+      for (let j = flag+1; j < trains[i].route.length; j++) {
+        if (trains[i].route[j].stationName == dest) {
+          flag = j;
+          res.json(trains[i]);
+        }
+      }
+    }
+    res.json({});
   } catch (error) {
     res.status(404).json({ message: error.message });
   }

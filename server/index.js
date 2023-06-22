@@ -19,7 +19,16 @@ app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
-app.use("/user", userRoutes);
+//Health Check
+app.get("/first", (req, res) => {
+  res.status(200).json({
+    type: "success",
+    message: "server is up and running",
+    data: null,
+  });
+});
+
+// app.use("/user", userRoutes);
 app.use("/train", trainRoutes);
 app.use("/ticket", ticketRoutes )
 
