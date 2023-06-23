@@ -10,13 +10,10 @@ const Availability = () => {
   const user = 1;
   const navigate = useNavigate();
   const trains = useSelector((state) => state.trainsReducer);
-  console.log(trains);
   const trainData = trains.data;
 
   const {fromCity,toCity} = useParams();
 
-  console.log(fromCity);
-  console.log(toCity);
   return (
     <>
         <Navbar/>

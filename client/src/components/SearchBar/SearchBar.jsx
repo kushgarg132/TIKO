@@ -30,10 +30,9 @@ const handleDepartureDateChange = (event) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const day=new Date(departureDate).getDay();
-    var today = Date.now();
-    // console.log(source);
-    console.log(day)
-    dispatch(getTrain({fromCity,toCity,day,today}));
+    var today = new Date();
+
+    dispatch(getTrain({source:fromCity,destination:toCity,journeyDay:day,today:today}));
     navigate("/avail/"+fromCity+"/"+toCity);
   };
 
